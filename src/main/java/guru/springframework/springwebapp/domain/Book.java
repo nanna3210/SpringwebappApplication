@@ -1,4 +1,4 @@
-package guru.springframework.spring5webapp.domain;
+package guru.springframework.springwebapp.domain;
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
@@ -12,14 +12,14 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String title ;
-    private String isbn ;
+    private String                                              isbn ;
     @ManyToOne
-    private  Publisher publisher;
+    private guru.springframework.springwebapp.domain.Publisher publisher;
 
     @ManyToMany
     @JoinTable(name = "author_book" , joinColumns = @JoinColumn(name = "book_id") , inverseJoinColumns =
     @JoinColumn(name = "author_id"))
-    private Set<Author> authors = new HashSet <> ();
+    private Set< guru.springframework.springwebapp.domain.Author > authors = new HashSet <> ();
 
 
     public Book ( ) {
@@ -32,19 +32,19 @@ public class Book {
     }
 
 
-    public Publisher getPublisher ( ) {
+    public guru.springframework.springwebapp.domain.Publisher getPublisher ( ) {
         return publisher;
     }
 
-    public void setPublisher ( Publisher publisher ) {
+    public void setPublisher ( guru.springframework.springwebapp.domain.Publisher publisher ) {
         this.publisher = publisher;
     }
 
-    public Set < Author > getAuthors ( ) {
+    public Set < guru.springframework.springwebapp.domain.Author > getAuthors ( ) {
         return authors;
     }
 
-    public void setAuthors ( Set < Author > authors ) {
+    public void setAuthors ( Set < guru.springframework.springwebapp.domain.Author > authors ) {
         this.authors = authors;
     }
 

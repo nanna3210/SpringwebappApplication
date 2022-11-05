@@ -1,11 +1,11 @@
-package guru.springframework.spring5webapp.bootStrap;
+package guru.springframework.springwebapp.bootStrap;
 
-import guru.springframework.spring5webapp.domain.Author;
-import guru.springframework.spring5webapp.domain.Book;
-import guru.springframework.spring5webapp.domain.Publisher;
-import guru.springframework.spring5webapp.repository.AuthorRepository;
-import guru.springframework.spring5webapp.repository.BookRepository;
-import guru.springframework.spring5webapp.repository.PublisherRepository;
+import guru.springframework.springwebapp.domain.Author;
+import guru.springframework.springwebapp.domain.Book;
+import guru.springframework.springwebapp.domain.Publisher;
+import guru.springframework.springwebapp.repository.AuthorRepository;
+import guru.springframework.springwebapp.repository.BookRepository;
+import guru.springframework.springwebapp.repository.PublisherRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -38,11 +38,15 @@ public class BootsStrapData implements CommandLineRunner {
 
 
 
-
+//
         nanna.getBooks ().add ( nannaBook );
         nannaBook.getAuthors ().add ( nanna );
         nannaBook.setPublisher ( publisher );
         publisher.getBooks ().add ( nannaBook );
+//    nanna.getBooks ().add ( nannaBook )
+
+
+
         authorRepository.save ( nanna );
         bookRepository.save ( nannaBook );
 
