@@ -24,13 +24,7 @@ public class Publisher {
 
     }
 
-//    public Publisher ( Long id , String name , String city , String state , String zip ) {
-//        this.id    = id;
-//        this.name  = name;
-//        this.city  = city;
-//        this.state = state;
-//        this.zip   = zip;
-//    }
+
 
     public Set < Book > getBooks ( ) {
         return books;
