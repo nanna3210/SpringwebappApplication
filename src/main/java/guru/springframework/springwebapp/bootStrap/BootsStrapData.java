@@ -38,12 +38,12 @@ public class BootsStrapData implements CommandLineRunner {
 
 
 
-//
+
         nanna.getBooks ().add ( nannaBook );
         nannaBook.getAuthors ().add ( nanna );
         nannaBook.setPublisher ( publisher );
         publisher.getBooks ().add ( nannaBook );
-//    nanna.getBooks ().add ( nannaBook )
+
 
 
 
@@ -62,9 +62,7 @@ public class BootsStrapData implements CommandLineRunner {
                         publisherRepository.save ( publisher );
         System.out.println ("Starting bootStrap  ...... ");
         System.out.println ( "number Of books  :  :: " +bookRepository.count ());
-//        Iterable < Author > allAuthor = authorRepository.findAll ();
-//        Iterator < Author > iterator  = allAuthor.iterator ();
-//        for (  )
+
         System.out.println ("no of books  by publisher "+publisher.getBooks ().size ());
     }
 }
