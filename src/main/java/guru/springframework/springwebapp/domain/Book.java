@@ -10,7 +10,7 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String title ;
-    private String                                              isbn ;
+    private String  isbn ;
     @ManyToOne
     private Publisher publisher;
 

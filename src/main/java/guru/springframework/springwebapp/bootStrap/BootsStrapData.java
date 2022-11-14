@@ -46,18 +46,25 @@ public class BootsStrapData implements CommandLineRunner {
 
 //adding book to author
         nanna.getBooks ().add ( nannaBook );
+
+//        |||||||||||||||||   adding publisher and author to book ||||||||||||||||||||||||||
 //        adding author to book
         nannaBook.getAuthors ().add ( nanna );
-//        adding publisher to book
+
+        //        adding publisher to book
         nannaBook.setPublisher ( publisher );
-//        adding book to publisher
+//        |||||||||||||||||   adding publisher and author to book ||||||||||||||||||||||||||
+
+
+        //        adding book to publisher
         publisher.getBooks ().add ( nannaBook );
 
 
-
+//saving the author
 
         authorRepository.save ( nanna );
 
+//        saving book
         bookRepository.save ( nannaBook );
 
                         Author rod  = new Author ("rod", "johnson");
