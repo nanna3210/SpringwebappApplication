@@ -27,28 +27,37 @@ public class BootsStrapData implements CommandLineRunner {
     public void run ( String... args ) throws Exception {
 
 
-//        fFor publisher
+
+
+//creating author
         Author nanna = new Author ( "nanna " , "dash" );
+//creating book
         Book nannaBook = new Book ("SpringBoot ", "12347878");
+//creating publisher
         Publisher publisher = new Publisher (  );
+//        fFor publisher
         publisher.setCity ( "bbsr" );
         publisher.setName ( "n-PUBLISH" );
         publisher.setState ( "ODISHA" );
         publisher.setZip ( "12312" );
         publisherRepository.save ( publisher );
+//        fFor publisher
 
 
-
-
+//adding book to author
         nanna.getBooks ().add ( nannaBook );
+//        adding author to book
         nannaBook.getAuthors ().add ( nanna );
+//        adding publisher to book
         nannaBook.setPublisher ( publisher );
+//        adding book to publisher
         publisher.getBooks ().add ( nannaBook );
 
 
 
 
         authorRepository.save ( nanna );
+
         bookRepository.save ( nannaBook );
 
                         Author rod  = new Author ("rod", "johnson");
