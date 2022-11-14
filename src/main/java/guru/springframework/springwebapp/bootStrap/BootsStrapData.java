@@ -27,6 +27,7 @@ public class BootsStrapData implements CommandLineRunner {
     public void run ( String... args ) throws Exception {
 
 
+//        fFor publisher
         Author nanna = new Author ( "nanna " , "dash" );
         Book nannaBook = new Book ("SpringBoot ", "12347878");
         Publisher publisher = new Publisher (  );
