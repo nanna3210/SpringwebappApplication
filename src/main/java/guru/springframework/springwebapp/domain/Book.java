@@ -2,17 +2,15 @@ package guru.springframework.springwebapp.domain;
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
-
+//book entity
 
 @Entity
-
-
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String title ;
-    private String                                              isbn ;
+    private String  isbn ;
     @ManyToOne
     private Publisher publisher;
 
