@@ -3,7 +3,7 @@ import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
-
+//entity annotation
 @Entity
 public class Author {
 
