@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 //entity annotation
+//author model
 @Entity
 public class Author {
 
