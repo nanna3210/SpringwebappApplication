@@ -27,7 +27,7 @@ public class Author {
     }
 
 
-
+//getter setter
     public Long getId ( ) {
         return id;
     }
